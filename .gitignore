@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# Folders
+/build
+/.cache
+
+# Projectile file from emacs
+*.projectile
