@@ -30,14 +30,14 @@ set(DEPS
 )
 
 set(DEP_VERSIONS # Actual tag for FetchContent_Declare
-    "3.1.0"
+    "3.2.1"
     "3.4"
     "5.4.1"
     "1.0.1"
 )
 
 set(DEP_TAGS
-    "v3.1.0"
+    "v3.2.1"
     "3.4"
     "v5.4.1"
     "1.0.1"

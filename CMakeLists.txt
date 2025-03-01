@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.31)
+cmake_minimum_required (VERSION 3.30)
 project ("FancyRenderer" VERSION 0.0.1)
 find_package(PkgConfig REQUIRED)
 
