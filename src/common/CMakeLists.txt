@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.31)
-project("common")
+project("Common")
 
 add_library(${PROJECT_NAME} INTERFACE)
 

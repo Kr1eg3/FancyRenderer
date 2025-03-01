@@ -26,6 +26,7 @@ target_link_libraries(${PROJECT_NAME}
     glm::glm
     VulkanMemoryAllocator
     Engine
+    Common
 )
 
 if(APPLE)
@@ -41,4 +42,5 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 23)
 endif()
 
-target_include_directories(${PROJECT_NAME} PRIVATE src/engine/core/include)
+target_include_directories(${PROJECT_NAME} PRIVATE src/engine/core/include
+                                                   src/common/include)
