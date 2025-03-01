@@ -7,6 +7,7 @@ auto main(int argc, char *argv[]) -> int {
     t.reset(); t.start();
 
     FancyEngine::FEngine e;
+	e.Initialize();
     float f = t.tick();
     std::cout << "Time elapsed: " << f << " seconds" << std::endl;
 

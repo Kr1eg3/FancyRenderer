@@ -4,7 +4,7 @@
 namespace  FancyEngine {
 
 FWindow::FWindow(int width, int height, const char* title)
-    : width_(width), height_(height), p_title_(title), p_window_(nullptr) {
+    : width_(width), height_(height), p_title_(title), p_window_(nullptr), is_initialized_(false) {
 }
 
 FWindow::~FWindow() {
