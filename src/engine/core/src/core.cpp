@@ -3,9 +3,17 @@
 namespace FancyEngine {
 
 FEngine::FEngine()
-    : window_(800, 600, "Fancy Engine")
-    , renderer_type_(RendererFactory::DIRECTX) {
-    std::cout << "Engine constructed" << std::endl;
+	: window_(800, 600, "Fancy Engine")
+	, renderer_type_(
+#if 1
+		IsPlatformMacOS() ?
+		RendererFactory::VULKAN
+		: RendererFactory::DIRECTX)
+#else
+		RendererFactory::VULKAN
+#endif
+	{
+	std::cout << "Engine constructed" << std::endl;
 }
 
 FEngine::~FEngine() {
