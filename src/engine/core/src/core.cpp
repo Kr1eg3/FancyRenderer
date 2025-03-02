@@ -28,4 +28,30 @@ void FEngine::Initialize() {
 
 }
 
+void FEngine::Run() {
+	while (!glfwWindowShouldClose(window_.GetRawWindow())) {
+		glfwPollEvents();
+
+
+		DoFrame();
+	}
+}
+
+void FEngine::DoFrame() {
+	// --------------------------------------------------------
+	// Begin frame
+	renderer_->BeginFrame();
+	// --------------------------------------------------------
+
+
+
+
+
+
+	// --------------------------------------------------------
+	// End frame
+	renderer_->EndFrame();
+	// --------------------------------------------------------
+}
+
 } // namespace FancyEngine

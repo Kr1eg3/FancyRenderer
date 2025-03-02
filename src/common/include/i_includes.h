@@ -59,6 +59,16 @@
     #define PLATFORM_SURFACE_EXTENSION VK_MVK_MACOS_SURFACE_EXTENSION_NAME
 #endif
 
+#ifdef PLATFORM_WINDOWS
+    #include <Win.h>
+    #include <wrl.h>
+    #include <d3d11.h>
+    #include <d3dcompiler.h>
+    #include <DirectXMath.h>
+    #pragma comment(lib, "d3d11.lib")
+    #pragma comment(lib, "D3DCompiler.lib")
+#endif
+
 inline bool IsPlatformWindows() {
 #ifdef PLATFORM_WINDOWS
     return true;

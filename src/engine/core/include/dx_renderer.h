@@ -1,5 +1,6 @@
 #pragma once
 
+#include <i_includes.h>
 #include <renderer_base.h>
 
 namespace FancyEngine {
@@ -23,6 +24,13 @@ public:
     virtual void BindIndexBuffer(uint32_t bufferId) override;
     virtual void BindTexture(uint32_t textureId, uint32_t slot) override;
     virtual void DrawIndexed(uint32_t indexCount) override;
+
+private:
+	Microsoft::WRL::ComPtr<ID3D11Device>			p_device_;
+	Microsoft::WRL::ComPtr<IDXGISwapChain>			p_swap_;
+	Microsoft::WRL::ComPtr<ID3D11DeviceContext>		p_context_;
+	Microsoft::WRL::ComPtr<ID3D11RenderTargetView>	p_target_;
+	Microsoft::WRL::ComPtr<ID3D11DepthStencilView>	p_depth_stencil_view_;
 };
 
 

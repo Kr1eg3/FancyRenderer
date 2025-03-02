@@ -21,6 +21,8 @@ public:
     FEngine &operator=(const FEngine &) = delete;
 
     void Initialize();
+    void Run();
+    void DoFrame();
 
 
 private:
