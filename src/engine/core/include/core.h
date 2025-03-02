@@ -3,7 +3,8 @@
 #include <i_includes.h>
 #include <utils.h>
 #include <window.h>
-#include <renderer.h>
+#include <renderer_base.h>
+#include <renderer_factory.h>
 
 namespace FancyEngine {
 
@@ -24,7 +25,7 @@ public:
 
 private:
     FWindow window_;
-    std::unique_ptr<FRenderer> renderer_;
+    std::unique_ptr<IFRenderDevice> renderer_;
     FancyUtils::FTimer test_timer_;
     RendererFactory::RendererType renderer_type_;
 

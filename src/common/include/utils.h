@@ -22,7 +22,7 @@ public:
         return elapsed;
     }
 
-    float tick() {
+    float tick() const {
         if (!is_running_) return 0.0f;
 
         auto now = std::chrono::steady_clock::now();
