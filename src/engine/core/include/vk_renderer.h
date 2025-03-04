@@ -23,6 +23,35 @@ public:
     virtual void BindIndexBuffer(uint32_t bufferId) override;
     virtual void BindTexture(uint32_t textureId, uint32_t slot) override;
     virtual void DrawIndexed(uint32_t indexCount) override;
+
+private:
+
+    VkInstance instance = VK_NULL_HANDLE;
+    VkSurfaceKHR surface = VK_NULL_HANDLE;
+    
+    std::vector<VkPhysicalDevice> GPUs;
+    uint32_t GPUsCount = 0;
+    VkPhysicalDevice physical = VK_NULL_HANDLE;
+    VkDevice logical = VK_NULL_HANDLE;
+    
+    VkQueue graphicsQueue = VK_NULL_HANDLE;
+
+    VkSwapchainKHR swapchain = VK_NULL_HANDLE;
+    std::vector<VkImage> swapchainImages;
+    uint32_t swapchainImagesCount;
+    std::vector<VkImageView> swapchainImagesViews;
+
+    VkRenderPass renderpass = VK_NULL_HANDLE;
+
+    std::vector<VkSemaphore> semaphores;
+    VkFence fence = VK_NULL_HANDLE;
+
+    VkCommandPool graphicsPool = VK_NULL_HANDLE;
+    VkCommandBuffer graphicsCommand = VK_NULL_HANDLE;
+
+    std::vector<VkFramebuffer> framebuffers;
+    uint32_t imageIndex = 0;
+    
 };
 
 
