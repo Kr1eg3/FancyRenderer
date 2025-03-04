@@ -9,7 +9,7 @@ FWindow::FWindow(int width, int height, const char* title)
 
 FWindow::~FWindow() {
     glfwTerminate();
-    std::cout << "Window destryoed" << std::endl;
+    std::cout << "Window destroyed" << std::endl;
 }
 
 void FWindow::Initialize() {
